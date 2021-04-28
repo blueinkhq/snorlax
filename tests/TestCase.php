@@ -1,6 +1,8 @@
 <?php
 
-class TestCase extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class SnorlaxTestCase extends TestCase
 {
     public function getRestClient(array $clientConfig = [])
     {

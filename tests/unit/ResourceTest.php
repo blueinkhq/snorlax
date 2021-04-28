@@ -10,7 +10,7 @@ require_once __DIR__ . '/../fixtures/ResourceWithNumberedParameters.php';
  * Tests for the Snorlax\Resource class. Since it is an abstract class, we need
  * to test using the example class PokemonResource.
  */
-class ResourceTest extends TestCase
+class ResourceTest extends SnorlaxTestCase
 {
     public function testAllMethod()
     {

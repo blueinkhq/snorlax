@@ -5,7 +5,7 @@ use Snorlax\Auth\BearerAuth;
 /**
  * Tests for the auth option on Snorlax
  */
-class BearerAuthTest extends TestCase
+class BearerAuthTest extends SnorlaxTestCase
 {
     public function testBearerAuth()
     {

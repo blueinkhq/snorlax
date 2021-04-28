@@ -9,7 +9,7 @@ use Snorlax\RestPool;
 /**
  * Tests for the Snorlax\RestPool class
  */
-class RestPoolTest extends TestCase
+class RestPoolTest extends SnorlaxTestCase
 {
     public function testIfResourcesAreBeingPopulatedWithRequests()
     {

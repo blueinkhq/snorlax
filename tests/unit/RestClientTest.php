@@ -13,7 +13,7 @@ use Snorlax\Auth\BearerAuth;
 /**
  * Tests for the Snorlax\RestClient class
  */
-class RestClientTest extends TestCase
+class RestClientTest extends SnorlaxTestCase
 {
 
     /**
@@ -30,11 +30,10 @@ class RestClientTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Snorlax\Exception\ResourceNotImplemented
-     * @expectedExceptionMessage Resource "digimons" is not implemented
      */
     public function testResourceNotImplementedException()
     {
+        $this->expectException(\Snorlax\Exception\ResourceNotImplemented::class);
         $this->getRestClient()->digimons;
     }
 
@@ -283,10 +282,12 @@ class RestClientTest extends TestCase
 
     /**
      * @test
-     * @expectedException \GuzzleHttp\Exception\ConnectException
+     *
      */
     public function testThrowConnectExceptionWhenRetriesIsOver()
     {
+        $this->expectException(\GuzzleHttp\Exception\ConnectException::class);
+
         $method = 'GET';
         $uri = '/';
         $options = ['retries' => 1];
